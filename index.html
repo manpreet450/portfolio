@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manpreet Kaur | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+      <div class="container nav">
+        <a class="logo" href="#">MK</a>
+        <nav class="links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a class="btn" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="tag">Front-End Developer</p>
+          <h1>
+            Hi, I’m <span class="accent">MANPREET KAUR</span> <br />
+            I build clean & responsive websites.
+          </h1>
+          <p class="sub">
+            <!-- Simple portfolio using HTML + CSS. Add your projects, skills, and contact details. -->
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Hire Me</a>
+          </div>
+
+          <div class="social">
+            <a href="https://github.com/manpreet450" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/manpreet-k-a20353334/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <!-- <a href="" target="_blank" rel="noreferrer">Email</a> -->
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <!-- <div class="avatar">🙂</div>
+          <div class="mini">
+            <p><b>Location:</b> Brampton, ON</p>
+            <p><b>Focus:</b> HTML • CSS • JS</p>
+            <p><b>Open to:</b> Internship / Junior Roles</p> -->
+            <img src="images/ChatGPT Image Mar 3, 2026, 12_59_19 PM.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <p class="muted"> Projects.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Expense Tracker</h3>
+            <p class="muted">Track income/expenses with localStorage.</p>
+            <div class="chips">
+              <span>HTML</span><span>CSS</span><span>JS</span><span>React</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://react-tracker-my-expense.netlify.app/" target="_blank" rel="noreferrer">Live</a>
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Shopping Cart</h3>
+            <p class="muted">Cart add/remove and total calculation.</p>
+            <div class="chips">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://react-shopping-cat.netlify.app/" target="_blank" rel="noreferrer">Live</a>
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Portfolio Website</h3>
+            <p class="muted">Responsive layout + clean sections.</p>
+            <div class="chips">
+              <span>HTML</span><span>CSS</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" target="_blank" rel="noreferrer">Live</a>
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">
+            <h3>Frontend</h3>
+            <p class="muted">HTML, CSS, JavaScript, Responsive Design,React, Angular, API Integration</p>
+          </div>
+          <div class="skill">
+            <h3>Tools</h3>
+            <p class="muted">Git, GitHub, VS Code, Figma</p>
+          </div>
+          <div class="skill">
+            <h3>Learning</h3>
+            <p class="muted">Java,python</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <h2>About</h2>
+        <p class="about">
+          I’m a developer who loves building modern, fast, and clean UI. I’m currently focusing on
+          strong HTML/CSS fundamentals + JavaScript projects, Responsive Design,React, Angular, API Integration
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p class="muted">Send a message (this form is UI-only without backend).</p>
+
+        <!-- <form id =' contact-form'class="form" //onsubmit="event.preventDefault(); alert('Message submitted (demo)!')"> -->
+           <form id ="contact-form" class="form" >
+          <div class="row">
+            <input type="text" name="from_name"placeholder="Your Name" required />
+            <input type="email" name="from_email"placeholder="Email" required />
+          </div>
+          <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <p>©2025 <span id="year"></span> MK. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <!-- <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("T1UWAOnVIQ4eVSTHO");
+
+  document.getElementById("contact-form")
+    .addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm(
+        "service_93gyote",
+        "template_nknj4kf",
+        this
+      )
+      .then(function() {
+        alert("Message Sent Successfully!");
+      }, function(error) {
+        alert("Failed to send message.");
+        console.log(error);
+      });
+    });
+</script>
+  </body>
+</html>
