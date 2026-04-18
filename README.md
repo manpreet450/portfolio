@@ -33,22 +33,8 @@ https://mkuiportfolio.netlify.app
  Projects showcase section
  Contact section
 
-⸻
 
-📸 Screenshots
 
-(Add screenshots here later)
-
-⸻
-
-🧠 What I Learned
-
-* Building responsive layouts
-* Structuring a clean UI
-* Improving design consistency
-* Working with Git & GitHub
-
-⸻
 
 
 
